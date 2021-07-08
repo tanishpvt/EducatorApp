@@ -74,11 +74,11 @@ public class PostActivity extends AppCompatActivity {
                 .start(PostActivity.this);
     }
 
-//    private String getFileExtension(Uri uri){
-//        ContentResolver contentResolver = getContentResolver();
-//        MimeTypeMap mime = MimeTypeMap.getSingleton();
-//        return  mime.getExtensionFromMimeType(contentResolver.getType(uri));
-//    }
+    private String getFileExtension(Uri uri){
+        ContentResolver contentResolver = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return  mime.getExtensionFromMimeType(contentResolver.getType(uri));
+    }
     private void uploadImage(){
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Posting");
