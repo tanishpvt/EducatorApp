@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     BottomNavigationView bottomNavigationView;
     Fragment selectedFragment=null;
 
-
+//NAV PLUS BOTTOM NAV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
