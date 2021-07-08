@@ -48,7 +48,7 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener {
 
-    //navigation
+    //navigation on process
     private static final int POS_CLOSE = 0;
     private static final int POS_DASHBOARD = 1;
     private static final int POS_MY_PROFILE = 2;
