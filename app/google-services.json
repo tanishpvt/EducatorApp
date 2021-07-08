@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "513871966764",
+    "firebase_url": "https://carrental-163b9.firebaseio.com",
+    "project_id": "carrental-163b9",
+    "storage_bucket": "carrental-163b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513871966764:android:78c075c98f58ea2da49789",
+        "android_client_info": {
+          "package_name": "com.example.vit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513871966764-hu6046l2v50tsqgauuv36chpqffrcm7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUO0ZNLhTBawnwHPMxTLerqzl_SC10cb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513871966764-hu6046l2v50tsqgauuv36chpqffrcm7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

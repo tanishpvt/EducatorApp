@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="66dp"-->
+<!--        android:background="@color/dashboardtoolbar"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="8">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/ll_search"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="5dp"-->
+<!--                android:background="@drawable/search_bg">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:src="@drawable/ic_drawer_search" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/search_bar"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Search for courses, educators"-->
+<!--                    android:textSize="15sp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:textColor="@color/black"/>-->
+
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_weight="2">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="25dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:src="@drawable/ic_notification"/>-->
+
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recycler_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="400dp"/>-->
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/bottom"-->
+<!--        android:id="@+id/fragment_container"/>-->
+
+
+
+<!-- NEW CODE -->
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/bottom"-->
+<!--        android:id="@+id/fragment_container"/>-->
+
+
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/bottom"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        >-->
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/bottom_navigation"-->
+<!--            app:labelVisibilityMode="unlabeled"-->
+<!--            android:background="?android:attr/windowBackground"-->
+<!--            app:menu="@menu/bottom_navigation"/>-->
+
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+
+
+
+</RelativeLayout>
