@@ -4,11 +4,9 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
-
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,26 +15,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".FollowersActivity"></activity>
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".CommentsActivity" />
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.MainActivityHandler" />
-        <activity android:name=".PostActivity"/>
-
+        <activity android:name=".PostActivity" />
         <activity
             android:name="com.canhub.cropper.CropImageActivity"
-            android:exported="false"
             android:configChanges="keyboardHidden|orientation|locale|screenSize"
+            android:exported="false"
             android:theme="@style/Base.Theme.AppCompat" />
-
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Onboarding.IntroductoryActivity" />
 
         <meta-data
