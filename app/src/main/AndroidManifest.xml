@@ -18,20 +18,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
-
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.MainActivityHandler" />
         <activity android:name=".PostActivity"/>
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"/>
+
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:exported="false"
+            android:configChanges="keyboardHidden|orientation|locale|screenSize"
+            android:theme="@style/Base.Theme.AppCompat" />
+
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Onboarding.IntroductoryActivity" />
 
         <meta-data
