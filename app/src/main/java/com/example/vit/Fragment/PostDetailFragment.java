@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -27,7 +28,7 @@ import java.util.List;
 
 public class PostDetailFragment extends Fragment {
 
-    String postid;
+    String mpublisherId;
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
     private List<Post> postList;
@@ -40,9 +41,14 @@ public class PostDetailFragment extends Fragment {
 
         SharedPreferences preferences =getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         //tanish ek no
-        //   postid=preferences.getString("postid","tanish");
-        postid=getArguments().getString("postid2");
-        Log.e("as",""+postid);
+//           mpublisherId =.getString("publisherId","asdasd");
+        try{
+            mpublisherId=getArguments().getString("publisherId", "");
+        } catch (NullPointerException e) {
+            Toast.makeText(getContext(), "maa chudi", Toast.LENGTH_SHORT).show();
+        }
+
+        Log.e("as",""+ mpublisherId);
 
 
 
@@ -53,6 +59,8 @@ public class PostDetailFragment extends Fragment {
 
 
         postList = new ArrayList<>();
+        postAdapter = new PostAdapter(getContext(),postList);
+        recyclerView.setAdapter(postAdapter);
         readPost();
 
 
@@ -63,7 +71,7 @@ public class PostDetailFragment extends Fragment {
 
     private void readPost() {
 
-        Query reference = FirebaseDatabase.getInstance().getReference("posts").orderByChild("postid").equalTo(postid);
+        Query reference = FirebaseDatabase.getInstance().getReference("posts").orderByChild("publisher").equalTo(mpublisherId);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -72,12 +80,9 @@ public class PostDetailFragment extends Fragment {
                 postList.clear();
                 for (DataSnapshot snapshot:dataSnapshot.getChildren()){
                     Post post1 = snapshot.getValue(Post.class);
-
                     postList.add(post1);
                 }
-                postAdapter = new PostAdapter(getContext(),postList);
-                recyclerView.setAdapter(postAdapter);
-
+                postAdapter.notifyDataSetChanged();
             }
 
             @Override

@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -127,11 +129,17 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS,",Context.MODE_PRIVATE).edit();
-                editor.putString("postid",post.getPostid());
+                editor.putString("publisherId",post.getPublisher());
+                Log.e("postid", post.getPostid());
                 editor.apply();
 
+                PostDetailFragment fragobj = new PostDetailFragment();
+                Bundle bundle=new Bundle();
+                bundle.putString("publisherId", post.getPublisher());
+                fragobj.setArguments(bundle);
+
                 ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new PostDetailFragment()).commit();
+                        fragobj).commit();
             }
         });
 
