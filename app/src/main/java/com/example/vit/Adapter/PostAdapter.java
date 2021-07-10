@@ -303,7 +303,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                     imageView.setImageResource(R.drawable.ic_liked);
                     imageView.setTag("liked");
                 } else  {
-                    imageView.setImageResource(R.drawable.ic_like);
+                    imageView.setImageResource(R.drawable.like);
                     imageView.setTag("like");
                 }
             }
@@ -370,10 +370,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child(postid).exists()){
-                    imageView.setImageResource(R.drawable.ic_save_black);
+                    imageView.setImageResource(R.drawable.ic_bookmarked);
                     imageView.setTag("saved");
                 } else {
-                    imageView.setImageResource(R.drawable.ic_savee_black);
+                    imageView.setImageResource(R.drawable.ic_bookmark);
                     imageView.setTag("save");
                 }
 

@@ -45,7 +45,7 @@ public class PostDetailFragment extends Fragment {
         try{
             mpublisherId=getArguments().getString("publisherId", "");
         } catch (NullPointerException e) {
-            Toast.makeText(getContext(), "maa chudi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "error", Toast.LENGTH_SHORT).show();
         }
 
         Log.e("as",""+ mpublisherId);

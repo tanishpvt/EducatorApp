@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.vit.EditProfileActivity;
 import com.example.vit.Fragment.ProfileFragment;
 import com.example.vit.MainActivity;
 import com.example.vit.Model.User;
@@ -105,6 +107,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
                 }
             }
         });
+//        holder.tv_complete_profile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS,",Context.MODE_PRIVATE).edit();
+////                editor.putString("profileid",user.getId());
+////                editor.apply();
+////
+////                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+////                        new ProfileFragment()).commit();
+//            }
+//        });
 
     }
 
@@ -131,8 +144,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
         public TextView username;
         public TextView fullname;
-        public CircleImageView image_profile;
-        public Button btn_follow;
+        public ImageView image_profile;
+        public Button btn_follow,tv_complete_profile;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -141,6 +154,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
             fullname=itemView.findViewById(R.id.fullname);
             image_profile=itemView.findViewById(R.id.image_profile);
             btn_follow=itemView.findViewById(R.id.btn_follow);
+//            tv_complete_profile=itemView.findViewById(R.id.tv_complete_profile);
         }
     }
 

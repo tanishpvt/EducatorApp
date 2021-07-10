@@ -102,7 +102,7 @@ public class MainActivityHandler extends AppCompatActivity {
                             hashMap.put("username",username.toLowerCase());
                             hashMap.put("fullname",fullname);
                             hashMap.put("bio","");
-                            hashMap.put("imageurl","https://firebasestorage.googleapis.com/v0/b/carrental-163b9.appspot.com/o/CV.PNG?alt=media&token=17710338-31a9-44e8-aaea-f8cd061d9822");
+                            hashMap.put("imageurl","https://firebasestorage.googleapis.com/v0/b/vit-education.appspot.com/o/a.png?alt=media&token=6b76bce6-94ce-4c0e-a96d-3ec8be75ad61");
 
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
