@@ -15,8 +15,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.vit.Drawer.DashBoardFragment;
-import com.example.vit.Drawer.MyProfileFragment;
 import com.example.vit.Fragment.ProfileFragment;
 import com.example.vit.MainActivity;
 import com.example.vit.Model.User;
@@ -74,8 +72,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //under development tanishpvt
-                //bug fixed
                 if(isfragment) {
                     SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
                     editor.putString("profileid", user.getId());

@@ -40,14 +40,14 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.notification_item,parent,false);
-        return new ViewHolder(view);
+        return new NotificationAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-         final NotificationModel notification = mNotification.get(position);
+        final NotificationModel notification = mNotification.get(position);
 
-       holder.text.setText(notification.getText());
+        holder.text.setText(notification.getText());
 
         getUserInfo(holder.image_profile,holder.username,notification.getUserid());
 

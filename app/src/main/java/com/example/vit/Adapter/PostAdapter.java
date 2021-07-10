@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+
 import com.example.vit.CommentsActivity;
 import com.example.vit.FollowersActivity;
 import com.example.vit.Fragment.PostDetailFragment;
@@ -43,6 +44,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.List;
+
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 

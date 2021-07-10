@@ -13,7 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vit.Adapter.PostAdapter;
+import com.example.vit.Adapter.StoryAdapter;
+import com.example.vit.Authentication.MainActivityHandler;
 import com.example.vit.Model.Post;
+import com.example.vit.Model.Story;
 import com.example.vit.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,7 +35,12 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
     private List<Post> postLists;
+
     private RecyclerView recyclerView_story;
+    private StoryAdapter storyAdapter;
+    private List<Story> storyList;
+
+
     private List<String> followingList;
 
     ProgressBar progressBar;
@@ -57,6 +65,10 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(),
                 LinearLayoutManager.HORIZONTAL, false);
         recyclerView_story.setLayoutManager(linearLayoutManager1);
+        storyList=new ArrayList<>();
+        storyAdapter = new StoryAdapter(getContext(),storyList);
+        recyclerView_story.setAdapter(storyAdapter);
+
         progressBar = view.findViewById(R.id.progress_circular);
 
         checkFollowing();
@@ -65,6 +77,8 @@ public class HomeFragment extends Fragment {
     }
     private  void checkFollowing(){
         followingList = new ArrayList<>();
+
+        checkforuserlogin();
         DatabaseReference reference =FirebaseDatabase.getInstance().getReference("Follow")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("following");
@@ -77,7 +91,7 @@ public class HomeFragment extends Fragment {
                     followingList.add(snapshot.getKey());
                 }
                 readposts();
-
+                readStory();
             }
 
             @Override
@@ -88,6 +102,27 @@ public class HomeFragment extends Fragment {
     }
 
 
+    public void checkforuserlogin() {
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null) {
+
+            String mUID=user.getUid();
+
+            //   SharedPreferences sp=getSharedPreferences("SP_User",MODE_PRIVATE);
+            //   SharedPreferences.Editor editor=sp.edit();
+            //   editor.putString("Current_USERID",mUID);
+            //   editor.apply();
+
+            //updatetoken
+            //noinspection deprecation
+            //  updateToken(FirebaseInstanceId.getInstance().getToken());
+        }
+        else{
+            startActivity(new Intent(getContext(), MainActivityHandler.class));
+
+        }
+    }
 
 
     private void readposts(){
@@ -119,5 +154,35 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+    private void readStory(){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Story");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                long timecurrent = System.currentTimeMillis();
+                storyList.clear();
+                storyList.add(new Story("",  0, 0,"",
+                        FirebaseAuth.getInstance().getCurrentUser().getUid()));
+                for (String id: followingList){
+                    int countstory=0;
+                    Story story = null;
+                    for (DataSnapshot snapshot: dataSnapshot.child(id).getChildren()){
+                        story = snapshot.getValue(Story.class);
+                        if(timecurrent > story.getTimestart() && timecurrent < story.getTimeend()){
+                            countstory++;
+                        }
+                    }
+                    if (countstory > 0){
+                        storyList.add(story);
+                    }
+                }
+                storyAdapter.notifyDataSetChanged();
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 }

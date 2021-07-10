@@ -1,4 +1,4 @@
-package com.example.vit;
+package com.example.vit.Adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import com.example.vit.MainActivity;
 import com.example.vit.Model.Comment;
 import com.example.vit.Model.User;
+import com.example.vit.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
