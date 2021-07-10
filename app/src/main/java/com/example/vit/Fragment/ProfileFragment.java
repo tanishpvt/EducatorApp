@@ -23,8 +23,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.vit.Adapter.MyFotoAdapter;
 import com.example.vit.EditProfileActivity;
+import com.example.vit.FollowersActivity;
 import com.example.vit.Model.Post;
 import com.example.vit.Model.User;
+import com.example.vit.OptionsActivity;
 import com.example.vit.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -106,7 +108,7 @@ public class ProfileFragment extends Fragment {
         recyclerView.setVisibility(View.VISIBLE);
         recyclerView_saves.setVisibility(View.GONE);
 
-//
+
         userInfo();
         getFollowers();
         getNrPosts();
@@ -146,13 +148,13 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-//        options.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), OptionsActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), OptionsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         my_fotos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,26 +172,26 @@ public class ProfileFragment extends Fragment {
 
             }
         });
-//
-//        followers.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), FollowersActivity.class);
-//                intent.putExtra("id",profileid);
-//                intent.putExtra("title","followers");
-//                startActivity(intent);
-//            }
-//        });
-//
-//        following.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), FollowersActivity.class);
-//                intent.putExtra("id",profileid);
-//                intent.putExtra("title","following");
-//                startActivity(intent);
-//            }
-//        });
+
+        followers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), FollowersActivity.class);
+                intent.putExtra("id",profileid);
+                intent.putExtra("title","followers");
+                startActivity(intent);
+            }
+        });
+
+        following.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), FollowersActivity.class);
+                intent.putExtra("id",profileid);
+                intent.putExtra("title","following");
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

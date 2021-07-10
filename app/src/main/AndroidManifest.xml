@@ -15,9 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FollowersActivity"></activity>
+        <activity android:name=".CommentsActivity"></activity>
+        <activity android:name=".AddStoryActivity" />
+        <activity android:name=".StoryActivity" />
+        <activity android:name=".OptionsActivity" />
+        <activity android:name=".FollowersActivity" />
         <activity android:name=".EditProfileActivity" />
-        <activity android:name=".CommentsActivity" />
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.MainActivityHandler" />
         <activity android:name=".PostActivity" />

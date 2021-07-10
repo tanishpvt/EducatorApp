@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.vit.Adapter.CommentAdapter;
 import com.example.vit.Model.Comment;
 import com.example.vit.Model.User;
 import com.google.firebase.auth.FirebaseAuth;
@@ -65,12 +66,15 @@ public class CommentsActivity extends AppCompatActivity {
         Intent intent =getIntent();
         postid =intent.getStringExtra("postid");
         publisherid =intent.getStringExtra("publisherid");
+
+
+
         recyclerView =findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         commentList=new ArrayList<>();
-        commentAdapter = new CommentAdapter(this,commentList,postid);
+        commentAdapter = new CommentAdapter(this,commentList, postid);
         recyclerView.setAdapter(commentAdapter);
 
 

@@ -40,8 +40,8 @@ public class PostDetailFragment extends Fragment {
 
         SharedPreferences preferences =getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         //tanish ek no
-     //   postid=preferences.getString("postid","tanish");
-      postid=getArguments().getString("postid2");
+        //   postid=preferences.getString("postid","tanish");
+        postid=getArguments().getString("postid2");
         Log.e("as",""+postid);
 
 
@@ -73,8 +73,8 @@ public class PostDetailFragment extends Fragment {
                 for (DataSnapshot snapshot:dataSnapshot.getChildren()){
                     Post post1 = snapshot.getValue(Post.class);
 
-                            postList.add(post1);
-                        }
+                    postList.add(post1);
+                }
                 postAdapter = new PostAdapter(getContext(),postList);
                 recyclerView.setAdapter(postAdapter);
 

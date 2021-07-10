@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class SearchFragment extends Fragment {
 
     private RecyclerView recyclerView;
@@ -46,27 +47,27 @@ public class SearchFragment extends Fragment {
 
         search_bar=view.findViewById(R.id.search_bar);
 
-         mUsers=new ArrayList<>();
-         userAdapter=new UserAdapter(getContext(),mUsers,true);
-         recyclerView.setAdapter(userAdapter);
+        mUsers=new ArrayList<>();
+        userAdapter=new UserAdapter(getContext(),mUsers,true);
+        recyclerView.setAdapter(userAdapter);
 
-         readUsers();
-         search_bar.addTextChangedListener(new TextWatcher() {
-             @Override
-             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        readUsers();
+        search_bar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-             }
+            }
 
-             @Override
-             public void onTextChanged(CharSequence s, int start, int before, int count) {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
                 searchUsers(s.toString().toLowerCase());
-             }
+            }
 
-             @Override
-             public void afterTextChanged(Editable s) {
+            @Override
+            public void afterTextChanged(Editable s) {
 
-             }
-         });
+            }
+        });
 
         return view;
     }
