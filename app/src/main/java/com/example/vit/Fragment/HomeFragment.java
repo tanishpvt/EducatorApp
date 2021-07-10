@@ -2,6 +2,7 @@ package com.example.vit.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -138,6 +139,7 @@ public class HomeFragment extends Fragment {
 
                         assert post != null;
                         if (post.getPublisher().equals(id)){
+                            Log.e("postid", post.getPostid());
                             //   Toast.makeText(getContext(), ""+post.getPublisher(), Toast.LENGTH_SHORT).show();
                             postLists.add(post);
                         }

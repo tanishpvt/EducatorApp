@@ -60,6 +60,13 @@
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/image_added"/>
+        <VideoView
+            android:layout_width="match_parent"
+            android:minHeight="200dp"
+            android:visibility="gone"
+            android:id="@+id/pVideoVv"
+            android:scaleType="fitCenter"
+            android:layout_height="400dp"></VideoView>
 
         <EditText
             android:layout_width="match_parent"
