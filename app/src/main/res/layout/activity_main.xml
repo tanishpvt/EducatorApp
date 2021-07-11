@@ -8,24 +8,29 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:id="@+id/navslider"
+        android:src="@drawable/ic_options" />
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/dashboardtoolbar"
-        app:titleTextColor="@color/drawer_icon_color"/>
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/toolbar_main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/dashboardtoolbar"-->
+<!--        app:titleTextColor="@color/drawer_icon_color"/>-->
     <!-- if want to change title color   -->
 
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"/>-->
 
 
     <FrameLayout
-        android:layout_below="@+id/toolbar_main"
+        android:layout_below="@+id/navslider"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom"
@@ -43,7 +48,7 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:id="@+id/bottom_navigation"
             app:labelVisibilityMode="unlabeled"
             android:background="?android:attr/windowBackground"

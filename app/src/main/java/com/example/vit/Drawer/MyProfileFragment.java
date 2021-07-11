@@ -18,7 +18,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class MyProfileFragment extends Fragment{
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = (ViewGroup) inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = (ViewGroup) inflater.inflate(R.layout.fragment_profilee, container, false);
         return view;
     }
 }
