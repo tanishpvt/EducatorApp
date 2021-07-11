@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity{
     BottomNavigationView bottomNavigationView;
     Fragment selectedFragment=null;
 
-    public ImageView navslider;
+    public ImageView navslider,livestream;
 
 //NAV PLUS BOTTOM NAV
     @Override
@@ -79,7 +79,8 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         navslider = findViewById(R.id.navslider);
-        navslider.setOnClickListener(new View.OnClickListener() {
+        livestream = findViewById(R.id.livestream);
+        livestream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);

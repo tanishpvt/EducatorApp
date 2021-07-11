@@ -34,4 +34,8 @@
     <string name="loginActivity_5">Yes</string>
     <string name="loginActivity_6">No</string>
     <string name="confirm_order">Confirm Order</string>
+    <string name="live">Unlimited Rooms for Meeting.
+                        Record Your important Session.
+                        LiveStream e.g: YouTube.
+                        Many more Features :</string>
 </resources>
