@@ -77,7 +77,7 @@ public class ProfileFragment extends Fragment {
         profileid =prefs.getString("profileid","none");
 
         image_profile=view.findViewById(R.id.image_profile);
-        options=view.findViewById(R.id.options);
+      //  options=view.findViewById(R.id.options);
         posts=view.findViewById(R.id.posts);
         followers=view.findViewById(R.id.followers);
         following=view.findViewById(R.id.following);
@@ -148,13 +148,13 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        options.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), OptionsActivity.class);
-                startActivity(intent);
-            }
-        });
+//        options.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getContext(), OptionsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         my_fotos.setOnClickListener(new View.OnClickListener() {
             @Override
