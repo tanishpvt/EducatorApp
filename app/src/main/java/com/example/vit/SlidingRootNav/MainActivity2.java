@@ -59,23 +59,23 @@ import java.util.Arrays;
 
 public class MainActivity2 extends AppCompatActivity{
 
-    //navigation on process
-    private static final int POS_CLOSE = 0;
-    private static final int POS_DASHBOARD = 1;
-    private static final int POS_MY_PROFILE = 2;
-    private static final int POS_NEARBY_RES = 3;
-    private static final int POS_SETTING = 4;
-    private static final int POS_CONTACT_US = 5;
-    private static final int POS_ABOUT_US = 6;
-    private static final int POS_LOGOUT = 8;
-
-    private String[] screenTitles;
-    private Drawable[] screenIcons;
-    private SlidingRootNav slidingRootNav;
+//    //navigation on process
+//    private static final int POS_CLOSE = 0;
+//    private static final int POS_DASHBOARD = 1;
+//    private static final int POS_MY_PROFILE = 2;
+//    private static final int POS_NEARBY_RES = 3;
+//    private static final int POS_SETTING = 4;
+//    private static final int POS_CONTACT_US = 5;
+//    private static final int POS_ABOUT_US = 6;
+//    private static final int POS_LOGOUT = 8;
+//
+//    private String[] screenTitles;
+//    private Drawable[] screenIcons;
+//    private SlidingRootNav slidingRootNav;
     EditText secretCodeBox;
     Button joinBtn, shareBtn;
-    BottomNavigationView bottomNavigationView;
-    Fragment selectedFragment=null;
+//    BottomNavigationView bottomNavigationView;
+//    Fragment selectedFragment=null;
 
     //NAV PLUS BOTTOM NAV
     @Override
