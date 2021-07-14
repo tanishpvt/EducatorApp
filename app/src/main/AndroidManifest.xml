@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SlidingRootNav.MainActivity2"></activity>
+        <activity android:name=".SlidingRootNav.SlideNavBar"></activity>
+        <activity android:name=".SlidingRootNav.MainActivity2" />
         <activity android:name=".CommentsActivity" />
         <activity android:name=".AddStoryActivity" />
         <activity android:name=".StoryActivity" />
@@ -25,21 +26,17 @@
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.MainActivityHandler" />
         <activity android:name=".PostActivity" />
-
         <activity
             android:name="com.canhub.cropper.CropImageActivity"
             android:configChanges="keyboardHidden|orientation|locale|screenSize"
             android:exported="false"
-            android:theme="@style/Base.Theme.AppCompat" />
-
-<!--        <activity-->
-<!--            android:name=".activity.JitsiVideoCallActivity"-->
-<!--            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:resizeableActivity="true"-->
-<!--            android:supportsPictureInPicture="true"-->
-<!--            android:windowSoftInputMode="adjustResize"/>-->
-
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- <activity -->
+        <!-- android:name=".activity.JitsiVideoCallActivity" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:resizeableActivity="true" -->
+        <!-- android:supportsPictureInPicture="true" -->
+        <!-- android:windowSoftInputMode="adjustResize"/> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

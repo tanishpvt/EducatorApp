@@ -41,6 +41,7 @@ import com.example.vit.Fragment.NotificationFragment;
 import com.example.vit.Fragment.ProfileFragment;
 import com.example.vit.Fragment.SearchFragment;
 import com.example.vit.SlidingRootNav.MainActivity2;
+import com.example.vit.SlidingRootNav.SlideNavBar;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -84,6 +85,14 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
+        navslider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SlideNavBar.class);
                 startActivity(intent);
             }
         });
