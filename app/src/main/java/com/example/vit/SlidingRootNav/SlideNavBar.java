@@ -30,6 +30,7 @@ import com.example.vit.Drawer.NearbyResFragment;
 import com.example.vit.Drawer.SettingsFragment;
 import com.example.vit.Drawer.SimpleItem;
 import com.example.vit.Drawer.SpaceItem;
+import com.example.vit.MainActivity;
 import com.example.vit.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -63,7 +64,7 @@ public class SlideNavBar extends AppCompatActivity implements DrawerAdapter.OnIt
         setContentView(R.layout.activity_slide_nav_bar);
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar_main);
-        setTitle("VIT");
+        setTitle("WELCOME TO PLUS");
         setSupportActionBar(toolbar);
 
         slidingRootNav = new SlidingRootNavBuilder(this)
@@ -195,7 +196,14 @@ public class SlideNavBar extends AppCompatActivity implements DrawerAdapter.OnIt
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBackPressed() {
-        if (doubleBackToExitPressed == 2) {
+        if (doubleBackToExitPressed == 1) {
+            Intent send = new Intent(SlideNavBar.this, MainActivity.class);
+            startActivity(send);
+//            finishAffinity();
+//            System.exit(0);
+        }
+        else if (doubleBackToExitPressed == 2)
+        {
             finishAffinity();
             System.exit(0);
         }
@@ -206,4 +214,6 @@ public class SlideNavBar extends AppCompatActivity implements DrawerAdapter.OnIt
 
         new Handler().postDelayed(() -> doubleBackToExitPressed=1, 2000);
     }
+
+
 }

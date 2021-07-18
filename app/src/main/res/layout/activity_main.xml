@@ -8,32 +8,34 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/navslider"
-        android:src="@drawable/ic_options" />
-
-    <ImageView
-        android:layout_marginTop="25dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="20dp"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/livestream"
-        android:src="@drawable/ic_live" />
-
     <TextView
         android:layout_marginTop="10dp"
-        android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Live Stream"
+        android:layout_marginStart="50dp"
+        android:text="Plus"
         android:textColor="@color/black"
         android:textSize="13dp"
         android:textStyle="bold"/>
+
+
+    <ImageView
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:id="@+id/navslider"
+        android:src="@drawable/education" />
+
+    <ImageView
+        android:layout_marginTop="7dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:id="@+id/livestream"
+        android:src="@drawable/livee" />
+
 
 <!--    <com.google.android.material.appbar.MaterialToolbar-->
 <!--        android:id="@+id/toolbar_main"-->
