@@ -7,12 +7,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
+import com.example.vit.Mode.DarkModePrefManager;
 import com.example.vit.R;
 
 public class SettingsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return (ViewGroup) inflater.inflate(R.layout.fragment_settings, container, false);
+
+
+
     }
+
+
 }

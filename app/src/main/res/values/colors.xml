@@ -42,4 +42,13 @@
 
     <color name="dashboardtoolbar">#eee6ff</color>
 
+    <color name="contentBodyColor">#FCFCFC</color>
+    <color name="black_transparent">#CC003366</color>
+    <color name="bottomNavigationTextColor">#B2B2B2</color>
+    <color name="nav_bar_color">#33CFCFCF</color>
+    <color name="grey_light">#59CFCFCF</color>
+
+
+
+
 </resources>
