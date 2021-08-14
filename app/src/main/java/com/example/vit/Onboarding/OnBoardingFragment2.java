@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.vit.Authentication.MainActivityHandler;
 import com.example.vit.MainActivity;
 import com.example.vit.R;
 
@@ -25,7 +26,7 @@ public class OnBoardingFragment2 extends Fragment {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), MainActivity.class);
+                Intent intent=new Intent(getActivity(), MainActivityHandler.class);
                 startActivity(intent);
             }
         });

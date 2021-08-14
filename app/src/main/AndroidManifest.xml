@@ -37,14 +37,15 @@
         <!-- android:resizeableActivity="true" -->
         <!-- android:supportsPictureInPicture="true" -->
         <!-- android:windowSoftInputMode="adjustResize"/> -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+
+        <activity android:name=".Onboarding.IntroductoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Onboarding.IntroductoryActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

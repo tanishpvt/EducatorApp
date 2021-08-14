@@ -43,9 +43,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
-    implementation 'com.google.firebase:firebase-database:20.0.0'
     implementation 'androidx.room:room-runtime:2.3.0'
-    implementation 'com.google.firebase:firebase-firestore:23.0.0'
     //noinspection GradleCompatible
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
@@ -68,21 +66,29 @@ dependencies {
     implementation 'com.github.sujithkanna:smileyrating:2.0.0'
     annotationProcessor 'androidx.room:room-compiler:2.3.0'
     implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
     implementation 'com.chaos.view:pinview:1.4.3'
     implementation 'com.github.inpossoft:CountryCodePickerProject:2.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+
     // libraryyy
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.github.shts:StoriesProgressView:3.0.0'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'com.github.CanHub:Android-Image-Cropper:3.1.3'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
+
+    implementation 'com.google.firebase:firebase-database:20.0.1'
+    implementation 'com.google.firebase:firebase-firestore:23.0.3'
     implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
 
 }

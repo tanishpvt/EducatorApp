@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.example.vit.Authentication.MainActivityHandler;
 import com.example.vit.MainActivity;
 import com.example.vit.Onboarding.OnBoardingFragment1;
 import com.example.vit.Onboarding.OnBoardingFragment2;
@@ -74,7 +75,7 @@ public class IntroductoryActivity extends AppCompatActivity {
             editor.apply();
         }
         else{
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, MainActivityHandler.class);
             startActivity(intent);
         }
     }

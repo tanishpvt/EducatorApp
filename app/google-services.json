@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "254780819381",
-    "firebase_url": "https://vit-education-default-rtdb.firebaseio.com",
-    "project_id": "vit-education",
-    "storage_bucket": "vit-education.appspot.com"
+    "project_number": "513871966764",
+    "firebase_url": "https://carrental-163b9.firebaseio.com",
+    "project_id": "carrental-163b9",
+    "storage_bucket": "carrental-163b9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:254780819381:android:f8d9b99b7cffb2f5357bfc",
+        "mobilesdk_app_id": "1:513871966764:android:90d84e06092a6a69a49789",
         "android_client_info": {
           "package_name": "com.example.vit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "254780819381-i5s5bovbapbfm5jbj6qpb5nd5mj1nb7d.apps.googleusercontent.com",
+          "client_id": "513871966764-hu6046l2v50tsqgauuv36chpqffrcm7i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCu6EgLao0O3dmgUHwlKnw4L5y9UMtS0Ek"
+          "current_key": "AIzaSyBUO0ZNLhTBawnwHPMxTLerqzl_SC10cb0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "254780819381-i5s5bovbapbfm5jbj6qpb5nd5mj1nb7d.apps.googleusercontent.com",
+              "client_id": "513871966764-hu6046l2v50tsqgauuv36chpqffrcm7i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
